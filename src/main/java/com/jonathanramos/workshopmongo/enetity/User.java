@@ -1,33 +1,28 @@
-package com.jonathanramos.workshopmongo.domain;
+package com.jonathanramos.workshopmongo.enetity;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class Post implements Serializable{
-	
+public class User implements Serializable{
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private String id;
-	private Date date;
-	private String title;
-	private String body;
-	private User author;
+	private String name;
+	private String email;
 	
-	public Post() {
+	public User() {
 	}
 
-	public Post(String id, Date date, String title, String body, User author) {
+	public User(String id, String name, String email) {
 		super();
 		this.id = id;
-		this.date = date;
-		this.title = title;
-		this.body = body;
-		this.author = author;
+		this.name = name;
+		this.email = email;
 	}
 
 	public String getId() {
@@ -38,36 +33,20 @@ public class Post implements Serializable{
 		this.id = id;
 	}
 
-	public Date getDate() {
-		return date;
+	public String getName() {
+		return name;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getBody() {
-		return body;
-	}
-
-	public void setBody(String body) {
-		this.body = body;
-	}
-
-	public User getAuthor() {
-		return author;
-	}
-	
-	public void setAuthor(User author) {
-		this.author = author;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
@@ -86,7 +65,7 @@ public class Post implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Post other = (Post) obj;
+		User other = (User) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

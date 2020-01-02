@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.jonathanramos.workshopmongo.domain.Post;
-import com.jonathanramos.workshopmongo.domain.User;
+import com.jonathanramos.workshopmongo.enetity.Post;
+import com.jonathanramos.workshopmongo.enetity.User;
 import com.jonathanramos.workshopmongo.repository.PostRepository;
 import com.jonathanramos.workshopmongo.repository.UserRepository;
 

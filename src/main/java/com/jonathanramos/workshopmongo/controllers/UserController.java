@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.jonathanramos.workshopmongo.domain.User;
 import com.jonathanramos.workshopmongo.dto.UserDTO;
+import com.jonathanramos.workshopmongo.enetity.User;
 import com.jonathanramos.workshopmongo.services.UserService;
 
 @RestController
